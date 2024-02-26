@@ -123,3 +123,112 @@
 //     });
 
 // }
+
+//Q12.
+
+// function sumArray(numbers) {
+//     var sum = 0;
+//     for (var i = 0; i < numbers.length; i++) {
+//         sum += numbers[i];
+//     }
+//     return sum;
+// }
+
+//Q13.
+// var param = function inner() { 
+//     return typeof inner; 
+// }
+// alert(param())
+
+// Q14.
+
+// function power(){
+//     var num = parseInt(prompt("Enter number: "))    
+//     var power = parseInt(prompt("Enter power: "))
+//     var result = Math.pow(num,power)
+//     document.write(result)
+// }
+// power()
+
+//Q15.
+
+// function diceRoll(){
+//     var dicenum = Math.floor(Math.random()*6)+1
+//     return dicenum
+
+// }/ var result = diceRoll()
+
+// document.write("The random number is: " + result)
+
+//Q16.
+// function reversenum(num) {
+//     var numString = num.toString();
+//     var reverseString = numString.split('').reverse().join('');
+//     var reversedNumber = parseInt(reverseString);
+//     return reversedNumber;
+// }
+
+// var x = 32243;
+// var reversed = reversenum(x);
+// document.write("Reversed number:", reversed);
+
+
+//Q17.
+// function capitalizeFirstLetter(str) {
+//     var words = str.split(' ');
+
+//     for (var i = 0; i < words.length; i++) {
+//         words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+//     }
+
+//     var capitalizedStr = words.join(' ');
+
+    
+//     return capitalizedStr;
+// }
+// var inputString = 'the quick brown fox';
+// document.write("Normal string: " + inputString + "<br>")
+// var capitalizedString = capitalizeFirstLetter(inputString);
+// document.write("Capitalized string:", capitalizedString);
+
+//Q18.
+// function findLongestWord(str) {
+//     var words = str.split(' ');
+
+//     var longestWord = '';
+
+//     for (var i = 0; i < words.length; i++) {
+//         if (words[i].length > longestWord.length) {
+//             longestWord = words[i];
+//         }
+//     }
+
+//     return longestWord;
+// }
+
+// var inputString = 'Web Development Tutorial';
+// document.write("Input String: " + inputString + "<br>")
+// var longestWord = findLongestWord(inputString);
+// document.write("Longest word:"+ longestWord);
+
+//Q19.
+
+function countVowels(str) {
+    str = str.toLowerCase();
+
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    var count = 0;
+
+    for (var i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) !== -1) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+var inputString = 'The quick brown fox';
+var vowelCount = countVowels(inputString);
+document.write("Number of vowels:", vowelCount);
